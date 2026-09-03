@@ -1,0 +1,72 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ════════════════════════════════════════════════════════════
+   나달 — 스포티/코트 테마
+   코트 그린 라임 · 클레이 오렌지 · 차콜 잉크 · 화이트 라인. 볼드 스포츠.
+   ════════════════════════════════════════════════════════════ */
+:root {
+  --bg:            #f2f4ec;
+  --surface:       #ffffff;
+  --panel:         #eef1e6;
+  --border:        rgba(26, 34, 22, 0.14);
+  --text:          #1a2216;
+  --muted:         #6b7462;
+
+  --court:         #7cc242;      /* 코트 라임 그린 */
+  --court-deep:    #5ea02e;
+  --clay:          #e0703a;      /* 클레이 오렌지 (서브 강조) */
+  --line:          #ffffff;
+  --ink:           #1a2216;
+
+  --gold:          var(--court);
+  --gold-dim:      var(--court-deep);
+  --gold-deep:     var(--court-deep);
+  --green:         var(--clay);        /* 위젯 상태색은 클레이로 포인트 */
+  --green-soft:    #e8895c;
+  --green-deep:    #c85a26;
+  --blue:          #2f7fbf;
+  --blue-bg:       #e6f1f9;
+  --red:           #d84343;
+  --red-bg:        #fbeaea;
+
+  --radius:        16px;
+  --scrollbar:     rgba(26, 34, 22, 0.22);
+  --font-mono:     'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --card-bg-from:  #22301c;
+  --card-bg-to:    #16200f;
+  --media-bg:      #16200f;
+  --stage-text:    #f2f4ec;
+  --stage-muted:   #9fb08d;
+
+  --overlay-soft:  rgba(26, 34, 22, 0.05);
+  --overlay-track: rgba(26, 34, 22, 0.14);
+  --shadow-card:   0 14px 40px rgba(26, 40, 20, 0.12);
+  --shadow-media:  0 14px 42px rgba(26, 40, 20, 0.22);
+}
+
+[data-theme="dark"] {
+  --bg:            #12160e; --surface:#1a2013; --panel:#161b0f;
+  --border: rgba(230,240,210,0.12); --text:#eef3e2; --muted:#9aa88a;
+  --court:#8fd455; --court-deep:#7cc242; --clay:#ef8552;
+  --blue:#66a8de; --blue-bg: rgba(47,127,191,0.22); --red:#e3736f; --red-bg: rgba(216,67,67,0.2);
+  --card-bg-from:#20281700; --card-bg-from:#222d16; --card-bg-to:#10140b; --media-bg:#12160e;
+  --stage-text:#eef3e2; --stage-muted:#9aa88a;
+  --overlay-soft: rgba(255,255,255,0.05); --overlay-track: rgba(255,255,255,0.12);
+  --shadow-card: 0 22px 60px rgba(0,0,0,0.5); --scrollbar: rgba(230,240,210,0.18);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+html, body, #root {
+  min-height: 100%;
+  font-family: 'Pretendard Variable', Pretendard, 'Noto Sans KR', -apple-system, sans-serif;
+  color: var(--text);
+}
+html, body { background: var(--bg); }
+body { overflow-x: hidden; }
+
+.mono { font-family: var(--font-mono); }
+::selection { background: rgba(124, 194, 66, 0.3); }
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: 3px; }
