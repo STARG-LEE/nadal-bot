@@ -23,4 +23,9 @@ export const BOT = {
     ['\\bOTT\\b', '오티티'],
     ['\\bTV\\b', '티비'],
   ],
+  // 2D 마스코트 생김새 (색·소품). 봇마다 달라 얼굴이 겹치지 않는다.
+  mascot: {
+    face: '#cfe89a', faceEdge: '#a8d060', cheek: '#e89a6a',
+    accent: '#e0703a', icon: '🎾', eye: 'happy',
+  },
 }
